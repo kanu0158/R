@@ -33,7 +33,6 @@ grade <- function(name,kor,eng,math){
 
 
 
-res
 res <- list(grade("김신욱",60,60,60),grade("구자철",70,70,70),grade("손흥민",90,90,90),grade("조현우",100,100,100),grade("이승우",80,80,80))
 class(res$name)
 class(res$sum)
