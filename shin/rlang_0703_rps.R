@@ -1,14 +1,14 @@
 ##가위바위보 함수로
+num_toString <- function(rps_num){
+  return (switch(toString(rps_num),
+                 '1' = '가위',
+                 '2' = '바위',
+                 '3' = '보'))
+}
 rps <- function(my){
   com <- sample(1:3,1,replace = TRUE)
-  return (c(switch(toString(my),
-                   '1' = '가위',
-                   '2' = '바위',
-                   '3' = '보'),
-            switch(toString(com),
-                   '1' = '가위',
-                   '2' = '바위',
-                   '3' = '보'),
+  return (c(num_toString(my),
+            num_toString(com),
             switch(
               toString(my-com),
               '-2' = {"승리"},
