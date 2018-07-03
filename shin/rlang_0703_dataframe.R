@@ -30,6 +30,10 @@ grade <- function(name,kor,eng,math){
     '5' = 'F'
   )))
 }
+
+
+
+res
 res <- list(grade("김신욱",60,60,60),grade("구자철",70,70,70),grade("손흥민",90,90,90),grade("조현우",100,100,100),grade("이승우",80,80,80))
 class(res$name)
 class(res$sum)
@@ -38,14 +42,17 @@ class(res$grade)
 
 #dataframe 구현
 grade.data <- data.frame(
-  st_name = c(res[[1]]$name,res[[2]]$name,res[[2]]$name,res[[3]]$name,res[[4]]$name),
-  score_sum = c(res[[1]]$sum,res[[2]]$sum,res[[2]]$sum,res[[3]]$sum,res[[4]]$sum),
-  score_avg = c(res[[1]]$avg,res[[2]]$avg,res[[2]]$avg,res[[3]]$avg,res[[4]]$avg),
-  score_grade = c(res[[1]]$grade,res[[2]]$grade,res[[2]]$grade,res[[3]]$grade,res[[4]]$grade),
+  st_name = c(res[[1]]$name,res[[2]]$name,res[[3]]$name,res[[4]]$name,res[[5]]$name),
+  score_sum = c(res[[1]]$sum,res[[2]]$sum,res[[3]]$sum,res[[4]]$sum,res[[5]]$sum),
+  score_avg = c(res[[1]]$avg,res[[2]]$avg,res[[3]]$avg,res[[4]]$avg,res[[5]]$avg),
+  score_grade = c(res[[1]]$grade,res[[2]]$grade,res[[3]]$grade,res[[4]]$grade,res[[5]]$grade),
   stringsAsFactors = FALSE
 )
 
 print(grade.data)
+
+result <- data.frame(grade.data$st_name,grade.data$score_sum)
+result 
 
 # Create the data frame.
 emp.data <- data.frame(
