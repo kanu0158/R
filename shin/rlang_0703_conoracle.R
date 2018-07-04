@@ -14,3 +14,4 @@ conn <- dbConnect(drv,
                   "0158")
 rst <- dbGetQuery(conn, "SELECT * FROM TAB")
 rst
+

@@ -14,6 +14,7 @@ grade <- function(name,kor,eng,math){
 
 
 
+
 res <- list(grade("김신욱",60,60,60),grade("구자철",70,70,70),grade("손흥민",90,90,90),grade("조현우",100,100,100),grade("이승우",80,80,80))
 #dataframe 구현
 grade.data <- data.frame(
@@ -35,7 +36,7 @@ name_avg2 <- paste(res[[2]]$name,",",res[[2]]$avg)
 name_avg3 <- paste(res[[3]]$name,",",res[[3]]$avg)
 name_avg4 <- paste(res[[4]]$name,",",res[[4]]$avg)
 name_avg5 <- paste(res[[5]]$name,",",res[[5]]$avg)
-
+name_avg1
 x <- c(res[[1]]$avg,res[[2]]$avg,res[[3]]$avg,res[[4]]$avg,res[[5]]$avg)
 labels <- c(name_avg1, name_avg2, name_avg3, name_avg4,name_avg5)
 pie(x,labels)
@@ -46,7 +47,7 @@ barplot(c(res[[1]]$avg,res[[2]]$avg,res[[3]]$avg,res[[4]]$avg,res[[5]]$avg),name
 ##히스토그램
 hist(c(9,13,41,8,36,22,12,41,31,33,19),xlab = "grade",col = c("yellow","blue","red","green","brown"),border = "blue")
 ##라인차트
-plot(c(7,12,28,3,41),type = "o")
+plot(c(40,12,28,3,41),type = "o")
 ##산포도차트
 input <- mtcars[,c('wt','mpg')]
 print(input)
